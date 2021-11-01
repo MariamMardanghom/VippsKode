@@ -1,4 +1,5 @@
 body {
+    font-family: Arial, sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,7 +8,7 @@ body {
 }
 
 .searchContainer {
-    margin-top: -100px;
+    margin-top: 20px;
     width: 500px;
     height: 50px;
     background-color: white;
@@ -19,7 +20,7 @@ body {
 }
 
 .searchContainer>i {
-    font-size: 30x;
+    font-size: 35px;
     color: #ff5b24;
 }
 
@@ -28,13 +29,11 @@ body {
     height: 40px;
     border: none;
     outline: none;
-    font-size: 22px;
+    font-size: 27px;
     padding-left: 10px;
 }
 
 #header {
-    position: absolute;
-    top: 20%;
     font-size: 60px;
     color: white;
     font-family: Arial, sans-serif;
@@ -54,4 +53,22 @@ body {
     position: fixed;
     left: 80px;
     top: 20px;
+}
+
+#countDisplay::first-letter {
+    text-transform: capitalize;
+}
+
+#countDisplay {
+    margin-top: 50px;
+    margin-bottom: 90px;
+    min-height: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

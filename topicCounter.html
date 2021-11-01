@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset = "UTF-8">
-<img id = "logo" src = "vipps.png" width = "200" height = "80">
-
+<img id="logo" src="vipps.png" width="200" height="80">
 
 </head>
     <link href="topicCounter.css" rel="stylesheet" type="text/css">
@@ -11,20 +11,23 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 <body>
 
-<h1 id = "header"> Søk på et tema</h1>
-<div class = "content">
-  <div class = "searchContainer">
-    <i onclick = "getTopic(); "class = "fa fa-search" aria-hidden = "true"></i>
-    <input id = "topicName" type = "text" placeholder = "Søk.." name = "search">
-  </div>
-</div>
-<div class = >
+<div id="container">
+  <h1 id="header"> Søk på et tema</h1>
 
+  <div class="content">
+    <div class="searchContainer">
+      <i id="enterSearch" onclick="getTopic(); " class="fa fa-search" aria-hidden="true"></i>
+      <input id="topicName" type="text" placeholder="Søk.." name="search">
+    </div>
+  </div>
+
+  <div id="countDisplay"></div>
 </div>
-<script src = "./topicCounter.js"></script>
+
+<script src="./topicCounter.js"></script>
+
 </body>
 
 
