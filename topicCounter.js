@@ -1,11 +1,13 @@
+//asynf funksjon som returnerer en promise og etter dette da fetcher apien til Wikipedia.
 async function getTopic() {
-    var input = document.getElementById("topicName").value;
+    const input = document.getElementById("topicName").value.toLowerCase();
+
 
     if (input == "" || input == null) {
-        alert("Husk å søke på strenger");
+        alert("Husk å søke på en STRENG!");
     } else {
         //La til &origin=*
-        var textResponse = await fetch("https://en.wikipedia.org/w/api.php?&origin=*&action=parse&section=0&prop=text&format=json&page=" + input, {
+        const textResponse = await fetch("https://en.wikipedia.org/w/api.php?&origin=*&action=parse&section=0&prop=text&format=json&page=" + input, {
                 method: "GET",
             }).then(response => {
                 if (!response.ok) {
@@ -13,10 +15,33 @@ async function getTopic() {
                 }
                 return response.json();
             })
-            .then(json => { var textFile = json['parse']['text']['*']; return textFile })
+            .then(json => { var textFile = json['parse']['text']['*'].toLowerCase(); return textFile })
             .catch(err => console.error(err));
 
-        console.log(textResponse)
+        console.log(textResponse);
+
+        const inputString = input.toString();
+
+        //Regular Expression brukes her for å finne hvor mange ganger ordet [topic] dukker opp i teksten vi søker på.
+        const countWords = (str) => {
+            let re = new RegExp(inputString, "g");
+            let result = (str || '');
+            result = (result.match(re) || []);
+            topicCount = result.length;
+            return topicCount;
+        }
+
+        const displayInput = countWords(textResponse);
+        console.log(displayInput);
+
+
+
+
+
+
+
+
 
     }
+
 };

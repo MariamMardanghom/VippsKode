@@ -1,44 +1,57 @@
-* {
-    box-sizing: border-box;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(25deg, #551488 50%, #722ac9 50%);
 }
 
-
-/* Style the search field */
-
-.topicSearch input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 30%;
-    background: #f1f1f1;
+.searchContainer {
+    margin-top: -100px;
+    width: 500px;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
 }
 
+.searchContainer>i {
+    font-size: 30x;
+    color: #ff5b24;
+}
 
-/* Style the submit button */
+.searchContainer>input {
+    flex: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    padding-left: 10px;
+}
 
-.topicSearch button {
-    float: left;
-    width: 15%;
-    padding: 10px;
-    background: #FF5B24;
+#header {
+    position: absolute;
+    top: 20%;
+    font-size: 60px;
     color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    /* Prevent double borders */
-    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-.topicSearch button:hover {
-    background: #ff7041;
+#topicName {
+    color: #ff5b24;
 }
 
+::placeholder {
+    color: #ff5b24;
+}
 
-/* Clear floats */
-
-.topicSearch::after {
-    content: "";
-    clear: both;
-    display: table;
+#logo {
+    display: block;
+    position: fixed;
+    left: 80px;
+    top: 20px;
 }
