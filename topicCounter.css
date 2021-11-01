@@ -7,9 +7,30 @@ body {
     background: linear-gradient(25deg, #551488 50%, #722ac9 50%);
 }
 
+#container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#header {
+    font-size: 60px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    position: fixed;
+    left: 80px;
+    top: 20px;
+}
+
 .searchContainer {
     margin-top: 20px;
-    width: 500px;
+    width: 600px;
     height: 50px;
     background-color: white;
     border-radius: 30px;
@@ -17,6 +38,7 @@ body {
     text-align: center;
     align-items: center;
     padding: 20px;
+    margin: auto;
 }
 
 .searchContainer>i {
@@ -33,26 +55,12 @@ body {
     padding-left: 10px;
 }
 
-#header {
-    font-size: 60px;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
 #topicName {
     color: #ff5b24;
 }
 
 ::placeholder {
     color: #ff5b24;
-}
-
-#logo {
-    display: block;
-    position: fixed;
-    left: 80px;
-    top: 20px;
 }
 
 #countDisplay::first-letter {
@@ -65,10 +73,5 @@ body {
     min-height: 20px;
     color: white;
     font-size: 30px;
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
     text-align: center;
 }

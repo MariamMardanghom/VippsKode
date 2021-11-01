@@ -9,7 +9,11 @@ inputField.addEventListener("keyup", function(event) {
     }
 });
 
-//asynf funksjon som returnerer en promise og etter dette da fetcher apien til Wikipedia.
+/*
+async funksjon sender en GET request til Wikipedia sitt api. Den bruker await slik at man vet at promise blir returnet.
+Videre sjekker man om responsen var gyldig. Så henter man ut tekstfilen på det temaet man har søkt på fra JSON objektet.
+Lagrer ønsket tekst som en konstant og teller antall ganger temaet dukker opp i teksten ved hjelp av regex.
+*/
 async function getTopic() {
     var input = inputField.value.toLowerCase();
 
